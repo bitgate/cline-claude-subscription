@@ -1,0 +1,38 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "model": "plan2api/claude/claude-sonnet-5",
+  "provider": {
+    "plan2api": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "apiKey": "{env:PLAN2API_KEY}",
+        "baseURL": "https://api.plan2api.com/v1"
+      },
+      "models": {
+        "claude/claude-sonnet-5": {
+          "name": "Claude Sonnet 5",
+          "tool_call": true,
+          "attachment": true,
+          "limit": { "context": 1000000, "output": 128000 }
+        },
+        "claude/claude-opus-5-5": {
+          "name": "Claude Opus 5.5",
+          "tool_call": true,
+          "attachment": true,
+          "limit": { "context": 1000000, "output": 128000 }
+        },
+        "claude/claude-haiku-4-5": {
+          "name": "Claude Haiku 4.5",
+          "tool_call": true,
+          "attachment": true,
+          "limit": { "context": 200000, "output": 64000 }
+        },
+        "openai/gpt-6.1-sol": {
+          "name": "GPT-6.1 Sol",
+          "tool_call": true,
+          "limit": { "context": 500000, "output": 128000 }
+        }
+      }
+    }
+  }
+}
